@@ -1,12 +1,24 @@
-# typeset-ref — @times-components/typeset@0.1.1
+# typeset — provenance
 
-Reference copy of `@times-components/typeset@0.1.1`, pulled from the public npm
-registry. This is the last published release before the author left News UK in
-March 2020, i.e. the last version carrying the author's code.
+`@times-components/typeset@0.1.1` was originally authored by **Jaye Marshall**
+while he worked at News UK & Ireland Ltd (The Times). This is the last published
+release before he left in March 2020 — i.e. the last version carrying his code.
+The code is reproduced here as a standalone, buildable reference.
 
-- tarball: `https://registry.npmjs.org/@times-components/typeset/-/typeset-0.1.1.tgz`
-- license: BSD 3-Clause, Copyright (c) 2017 News UK & Ireland Ltd (see pkg/LICENSE)
+- npm tarball: `https://registry.npmjs.org/@times-components/typeset/-/typeset-0.1.1.tgz`
+- license: BSD 3-Clause, Copyright (c) 2017 News UK & Ireland Ltd (see [`LICENSE`](./LICENSE))
 - original repo: `github.com/newsuk/times-components` (now removed/private)
 
-NOTE: This is News UK's BSD-3 licensed code, provided as a design reference for
-a clean from-scratch rewrite — not a codebase to copy wholesale.
+## Copyright vs authorship
+
+- **Authorship:** the core layout engine (`TextContainer`, `LayoutManager`,
+  `AttributedString`, the exclusion system, `FontStorage`, etc.) was originally
+  written by Jaye Marshall at News UK.
+- **Copyright:** ownership of the code rests with News UK & Ireland Ltd, who
+  published it under the BSD 3-Clause license. BSD-3 permits free use, copying,
+  modification and redistribution provided the copyright notice is retained and
+  News UK's name is not used to endorse or promote derived products.
+
+Nothing here claims News UK endorsement, nor ownership by the author. This repo
+is a permitted BSD-3 redistribution intended as a design reference for a clean
+from-scratch rewrite.

@@ -9,9 +9,9 @@ rendering: a drop cap, an inline image, or a pull quote is modelled as an
 
 This repo is a standalone, buildable reference rebuild of
 [`@times-components/typeset@0.1.1`](https://www.npmjs.com/package/@times-components/typeset) —
-the last published release before the author left News UK in March 2020. The
-published package's source and tests are reproduced here at the top level with a
-clean build setup.
+the last published release before the original author, **Jaye Marshall**, left
+News UK in March 2020. The published package's source and tests are reproduced
+here at the top level with a clean build setup.
 
 ## How it works
 
@@ -62,7 +62,8 @@ Output lands in `dist/` (`main` = `dist/index.js`, `types` = `dist/index.d.ts`).
 
 ## License & provenance
 
-BSD 3-Clause. See [`LICENSE`](./LICENSE). The original code is Copyright (c) 2017
-News UK & Ireland Ltd, published under BSD-3 on npm as
+BSD 3-Clause. See [`LICENSE`](./LICENSE). The code was **originally authored by
+Jaye Marshall** while he worked at News UK; the copyright is held by News UK &
+Ireland Ltd (Copyright (c) 2017), which published it under BSD-3 on npm as
 `@times-components/typeset`. See [`PROVENANCE.md`](./PROVENANCE.md) for the full
 attribution and history.
