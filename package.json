@@ -1,0 +1,25 @@
+{
+  "name": "typeset",
+  "version": "0.0.0",
+  "description": "Text layout with arbitrary exclusions (reference rebuild of @times-components/typeset@0.1.1)",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "echo \"no tests configured\""
+  },
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "opentype.js": "1.1.0",
+    "point-in-polygon": "1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "12.7.12",
+    "@types/point-in-polygon": "1.0.0",
+    "typescript": "3.7.2"
+  }
+}
