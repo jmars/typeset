@@ -1,19 +1,33 @@
-# typeset
+# The Times layout system — typeset + ts-styleguide
 
-Text layout with arbitrary shapes / exclusions.
+Two halves of one system, originally authored and built by **Jaye Marshall**
+while he worked at News UK & Ireland Ltd (The Times), recovered and preserved
+here:
 
-`typeset` flows text around exclusion zones that may be **any polygon** — not just
-rectangles. It was the custom text-layout engine behind newspaper article body
-rendering: a drop cap, an inline image, or a pull quote is modelled as an
+| Directory | Package | Role |
+| --- | --- | --- |
+| `.` (root) | `typeset` | geometry — flows text around arbitrary-shaped exclusions |
+| `ts-styleguide/` | `ts-styleguide` | editorial design intent — the tokens that say what "looks right" is |
+
+Together they turn "this is a style-magazine article" into actually typeset,
+correctly-floated text. `ts-styleguide` supplies the design decision (fonts,
+colours, line-heights, per section + template); `typeset` renders it around
+drop-caps, images and pull-quotes.
+
+---
+
+## typeset — text layout with arbitrary shapes
+
+`typeset` flows text around exclusion zones that may be **any polygon** — not
+just rectangles. A drop cap, an inline image, or a pull quote is modelled as an
 `Exclusion`, and the engine fills text into the remaining free space.
 
-This repo is a standalone, buildable reference rebuild of
+This is a standalone, buildable reference rebuild of
 [`@times-components/typeset@0.1.1`](https://www.npmjs.com/package/@times-components/typeset) —
-the last published release before the original author, **Jaye Marshall**, left
-News UK in March 2020. The published package's source and tests are reproduced
-here at the top level with a clean build setup.
+the last published release before Jaye Marshall left News UK in March 2020.
+See [`ts-styleguide/`](./ts-styleguide) for the design-token half.
 
-## How it works
+### How the engine works
 
 Two cooperating pieces:
 
@@ -35,7 +49,7 @@ around its actual shape. `FontStorage` measures glyph advances via `opentype.js`
 > flow and never imports them. Justified layout was designed-for but not wired in
 > here.
 
-## Modules
+### Modules (typeset)
 
 | File | Responsibility |
 | --- | --- |
@@ -50,7 +64,7 @@ around its actual shape. `FontStorage` measures glyph advances via `opentype.js`
 | `src/FontStorage.ts` | font registry + `opentype.js` advance-width measurement |
 | `src/index.ts` | public exports |
 
-## Build
+### Build
 
 ```sh
 npm install
@@ -60,10 +74,18 @@ npm run typecheck
 
 Output lands in `dist/` (`main` = `dist/index.js`, `types` = `dist/index.d.ts`).
 
-## License & provenance
+## ts-styleguide — the design system
 
-BSD 3-Clause. See [`LICENSE`](./LICENSE). The code was **originally authored by
-Jaye Marshall** while he worked at News UK; the copyright is held by News UK &
-Ireland Ltd (Copyright (c) 2017), which published it under BSD-3 on npm as
-`@times-components/typeset`. See [`PROVENANCE.md`](./PROVENANCE.md) for the full
-attribution and history.
+See [`ts-styleguide/`](./ts-styleguide) — the editorial design tokens and
+`themeFactory` (section + template → fonts / colour / headline case) that drive
+the engine, with its own provenance and module breakdown.
+
+## Provenance & license
+
+BSD 3-Clause throughout. The two packages were originally authored by **Jaye
+Marshall** at News UK; copyright is held by News UK & Ireland Ltd (Copyright
+(c) 2017), which published them under BSD-3 on npm. See
+[`PROVENANCE.md`](./PROVENANCE.md) (typeset) and
+[`ts-styleguide/PROVENANCE.md`](./ts-styleguide/PROVENANCE.md) for full
+attribution and history. [`provenance/`](./provenance) archives every published
+version of `typeset`.
